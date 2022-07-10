@@ -1,4 +1,4 @@
-# 2DWater-Refelection
+# 2DWater-Reflection
 Cocos 3.5.2 2DWater-Refelection
 Use Render Texture and shader to do water reflection in 2D game.
 
