@@ -26,6 +26,11 @@
   ],
   "_props": [
     {
+      "tiling": {
+        "__type__": "cc.Vec2",
+        "x": 1,
+        "y": 1
+      },
       "waveTexture": {
         "__uuid__": "c49b3b8f-e3e8-46e7-abee-bc075fa9e61b@6c48a",
         "__expectedType__": "cc.Texture2D"

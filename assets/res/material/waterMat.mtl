@@ -10,6 +10,7 @@
   "_techIdx": 0,
   "_defines": [
     {
+      "USE_TILING": true,
       "USE_WAVE": true,
       "USE_CAUSTIC": true,
       "USE_COLOR_STEP": true,
@@ -55,7 +56,7 @@
         "__uuid__": "fb1988c2-0717-4f64-8cc9-24665c007357@6c48a",
         "__expectedType__": "cc.Texture2D"
       },
-      "colorStepUv": 2.8,
+      "colorStepUv": 2.2,
       "alphaStepUv": 10
     }
   ]

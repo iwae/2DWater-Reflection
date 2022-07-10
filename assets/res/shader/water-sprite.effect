@@ -16,6 +16,7 @@ CCEffect %{
       rasterizerState:
         cullMode: none
       properties:
+        tiling:  { value: [1.,0.5] }
         waveTexture:    { value: white }
         waveDirection:    { value: [0.5,0.5] }
         waveSpeed:    { value: [0.5], editor: { slide: true, range: [0.0, 1.0], step: 0.01 }  }
@@ -45,6 +46,12 @@ CCProgram sprite-vs %{
     #include <common>
   #endif
 
+  #if USE_TILING
+  uniform VsConstant{
+    vec2 tiling;
+  };
+  #endif
+
   in vec3 a_position;
   in vec2 a_texCoord;
   in vec4 a_color;
@@ -68,6 +75,11 @@ CCProgram sprite-vs %{
     #endif
 
     uv0 = a_texCoord;
+
+    #if USE_TILING
+    uv0 *=tiling;
+    #endif
+    
     #if SAMPLE_FROM_RT
       CC_HANDLE_RT_SAMPLE_FLIP(uv0);
     #endif
